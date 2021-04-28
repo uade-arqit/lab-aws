@@ -3,7 +3,8 @@ Description:  This template deploys a VPC, with
   It deploys an internet gateway, with a default route on the public subnets. 
   It deploys an Ec2 with WordPress and EC2 MySQL RDS 
   It Needs The KeyPairs
-
+  LONG Version - With    Multi AZ and RR - It deploy in almost 30 min
+  LITE Version - Whitout Multi AZ and RR - It deploy in only    3 min max
 
 Parameters:
 
@@ -284,21 +285,21 @@ Resources:
       MasterUsername:     !Ref 'WordpressDbUser'
       MasterUserPassword: !Ref 'WordpressDbPass'
       DBSubnetGroupName: !Ref DBSubnetGroup
-      MultiAZ: true
+      # MultiAZ: true
       Tags:
       - Key: Name
         Value: MySQL RDS
       VPCSecurityGroups: [ !GetAtt [SecurityGroupDB, GroupId] ]
     DeletionPolicy: Snapshot
 
-  MySqlReadReplicaRDS:
-    Type: AWS::RDS::DBInstance
-    Properties:
-      SourceDBInstanceIdentifier: !Ref 'MySqlMasterRDS'
-      DBInstanceClass: "db.t2.small"
-      Tags:
-      - Key: Name
-        Value: MySQL RDS-RR
+  # MySqlReadReplicaRDS:
+  #   Type: AWS::RDS::DBInstance
+  #   Properties:
+  #     SourceDBInstanceIdentifier: !Ref 'MySqlMasterRDS'
+  #     DBInstanceClass: "db.t2.small"
+  #     Tags:
+  #     - Key: Name
+  #       Value: MySQL RDS-RR
 
 Outputs:
   VPC:
