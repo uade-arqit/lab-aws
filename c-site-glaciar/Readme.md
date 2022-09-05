@@ -35,3 +35,16 @@ Es un sitio con HTML/css
       aws deploy push --application-name glaciar-app \
                --s3-location s3://glaciar2/site-glaciar-lab-02.zip \
                --ignore-hidden-files
+
+
+
+# CloudFront Variantes
+
+   https://d3btwfsgyrkdyo.cloudfront.net/
+   https://d3btwfsgyrkdyo.cloudfront.net/glaciar
+   https://d3btwfsgyrkdyo.cloudfront.net/glaciar/index.html
+   
+   
+   http://d3btwfsgyrkdyo.cloudfront.net/
+   http://d3btwfsgyrkdyo.cloudfront.net/glaciar
+   http://d3btwfsgyrkdyo.cloudfront.net/glaciar/index.html
