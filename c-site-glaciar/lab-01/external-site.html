@@ -31,30 +31,32 @@
             font-size: small;
         }
     </style>
+    <script>
+        function reemplazar(id) {
+            document.getElementById(id).innerHTML = "<strong>" 
+                 + "Esto es del Dino Site (local)" 
+                 + "</strong>"
+        }
+    </script>
 </head>
 <body class="center">
     
     <h1 class="txtCenter">deliver.ar</h1>
     <h2 class="txtCenter">AWS Essentials 2022</h2>
 
-    <h2 class="txtCenter">404 Error</h2>
+    <h2 class="txtCenter">Getting Started ~ Glaciar site v1.0</h2>
     <br><br>
-    <img src="img/Glaciar-pixabay-219837.jpg" alt="" width="70%">
-    <br>
-    <a class="linkCenter" href="https://www.pexels.com/es-es/foto/brumoso-cielo-con-neblina-con-niebla-219837/">Photo: Pixabay ~ CC0</a>
+
+    <div id="externalSite">
+        Leyenda del External Site
+    </div>
+
+    <br><br>
+    <button onclick="reemplazar('externalSite')">
+        cambiar desde el external (local)
+    </button>
+    <button onclick="reemplazar('externalSite')">
+        cambiar ddesde el external (remoto)
+    </button>
 </body>
 </html>
-
-
-<!--
-Photo: 
-    Glaciar Perito Moreno
-    I, Luca Galuzzi 
-    CC BY-SA 2.5
-    https://es.wikipedia.org/wiki/Glaciar_Perito_Moreno#/media/Archivo:Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG
-
-Photo Error:
-    CC0
-    Glaciar-pixabay-219837
-    https://www.pexels.com/es-es/foto/brumoso-cielo-con-neblina-con-niebla-219837/
--->

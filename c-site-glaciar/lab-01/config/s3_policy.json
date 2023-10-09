@@ -3,19 +3,19 @@
     "Version": "2012-10-17",
     "Statement": [
         {
-            "Sid": "MyPublicPolicy",
+            "Sid": "DeliverArPublicPolicy",
             "Effect": "Allow",
             "Principal": "*",
-            "Resource": "arn:aws:s3:::website-ninja/*",
+            "Resource": "arn:aws:s3:::www.deliver.ar/*",
             "Action": [
                 "s3:GetObject"
             ]
         },
         {
-            "Sid": "MyPrivatePolicy",
+            "Sid": "DeliverArPrivatePolicy",
             "Effect": "Deny",
             "Principal": "*",
-            "Resource": "arn:aws:s3:::website-ninja/config/*",
+            "Resource": "arn:aws:s3:::www.deliver.ar/config/*",
             "Action": [
                 "s3:GetObject"
             ]
