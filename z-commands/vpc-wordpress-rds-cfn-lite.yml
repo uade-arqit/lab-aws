@@ -279,8 +279,8 @@ Resources:
     Type: AWS::RDS::DBInstance
     Properties:
       DBName: !Ref 'WordpressDbName'
-      AllocatedStorage: 5                        #5 GB
-      DBInstanceClass: "db.t2.small"
+      AllocatedStorage: 5                        #5 GB Minimo
+      DBInstanceClass: "db.t2.micro"
       Engine: MySQL
       MasterUsername:     !Ref 'WordpressDbUser'
       MasterUserPassword: !Ref 'WordpressDbPass'
