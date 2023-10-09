@@ -1,5 +1,15 @@
 # AWS CLI Command Useful
 
+
+# ______________
+# Ojo con RDS y AWS Academy
+
+      # Engine: MySQL
+      Engine: mysql                              # En AWS Academy dice que el Engine en Lowercase!  
+
+      "Note: if you are creating an RDS instance using a CloudFormation template, 
+       be sure to specify the engine type using lower-case letters."
+      
 # ______________
 # Set the Region
 
